@@ -1,0 +1,169 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+
+/* Center headings */
+h2 {
+  text-align: center;
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Input styling */
+input {
+  padding: 10px;
+  padding-right: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%; /* Make the input field width 100% of its container */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+  overflow: hidden; /* Hide any overflowing content */
+  text-overflow: ellipsis; /* Show ellipsis (...) if content overflows */
+}
+
+/* Button styling */
+button {
+  padding: 10px;
+  background-color: #7B008A;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #572d9f;
+}
+
+/* Container for form and image */
+.reg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+}
+
+/* Form and image layout */
+.regcont {
+  background-color: #fff;
+  padding: 20px 20px;
+  
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  padding-right: 40px;
+}
+
+.imgdiv {
+  text-align: center;
+  width: 50%;
+  margin-right: 30px;
+
+}
+
+.img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+}
+
+/* Radio button styling */
+.radio {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+/* RegistrationForm.css */
+.password-field {
+  position: relative;
+  
+}
+
+.password-field input[type="password"] {
+  padding-right: 10px; /* Create space for the eye icon */
+}
+
+.password-field .password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .reg-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .regcont {
+    margin: 20px;
+  }
+}
+
+
+
+.password-toggle {
+  position: absolute;
+  width: 20px;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  /* align-items: center; */
+  justify-content:end;
+}
+
+.password-toggle:focus {
+  outline: none;
+}
+
+.password-toggle svg {
+  width: 20px;
+  height: auto;
+  color: #888;
+}
+
+.password-toggle:hover svg {
+  color: #555;
+}
+/* Styling for the registration message */
+.registration-message {
+font-size: 16px;
+margin-top: 10px;
+text-align: center;
+}
+
+/* Styling for the danger message */
+.registration-message.danger {
+color: #f44336; /* Red color for danger messages */
+}
+
+/* Styling for the success message */
+.registration-message.success {
+color: #4caf50; /* Green color for success messages */
+}

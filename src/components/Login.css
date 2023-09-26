@@ -1,0 +1,236 @@
+/* Global Styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.container-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 20px;
+ 
+}
+
+/* Login Form Styles */
+.login {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form.loginform {
+  width: 100%;
+  max-width: 400px;
+}
+
+.loginform {
+  display: flex;
+  flex-direction: column;
+}
+
+.password-input {
+  position: relative;
+}
+
+.email-input {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url('https://static.vecteezy.com/system/resources/previews/011/299/215/original/simple-loading-or-buffering-icon-design-png.png') center center no-repeat;
+  background-size: cover;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Form Element Styles */
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #7b008a;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0 0;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.select-border::before,
+.select-border::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #ccc;
+  pointer-events: none;
+}
+
+.select-border::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.select-border::after {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container-root {
+    flex-direction: column;
+    align-items: center;
+  }
+  .imageDiv {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .login {
+    margin-right: 0;
+  }
+  .loginform {
+    display: flex;
+    flex-direction: column;
+  }
+  input[type="text"],
+  input[type="password"],
+  select {
+    width: 100%;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .radio-inline {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  button {
+    margin-top: 20px;
+  }
+}
+
+/* Success and Error Messages */
+.login-success {
+  color: green;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+/* Links and Text Styles */
+.reg,
+.forgot {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.reg a,
+.forgot a {
+  color: #7b008a;
+  text-decoration: none;
+}
+
+.reg a:hover,
+.forgot a:hover {
+  text-decoration: underline;
+}
+.form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url('https://cdn.iconscout.com/icon/free/png-256/dropdown-arrow-1767531-1502435.png') no-repeat right center;
+  background-size: 20px;
+  position: relative;
+}
+
+.form select::before,
+.form select::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #ccc;
+  pointer-events: none;
+}
+
+.form select::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.form select::after {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: white;
+}
